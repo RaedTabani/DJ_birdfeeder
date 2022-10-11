@@ -23,9 +23,11 @@ public class DataModel{
 }
 public class BuildingModel{
 
+    
     public string assetId;
-    public string name;
+    public string spriteId;
     public string description;
+    public int cost;
     public int level;
     public int amount;
     public int time;

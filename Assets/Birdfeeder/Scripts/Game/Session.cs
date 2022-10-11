@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
+using Newtonsoft.Json;
 public class Session : MonoBehaviour
 {
     public static Session Instance;
@@ -23,7 +24,8 @@ public class Session : MonoBehaviour
     }
     void Start()
     {
-
+        GetConfig();
+        Debug.Log(config.buildings.Count);
         ready = true;
         StartCoroutine(LoadNextScene());   
     }
@@ -32,6 +34,10 @@ public class Session : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void GetConfig(){
+        config = JsonConvert.DeserializeObject<ConfigModel>(tempConfig.text);
     }
 
     private IEnumerator LoadNextScene(){
