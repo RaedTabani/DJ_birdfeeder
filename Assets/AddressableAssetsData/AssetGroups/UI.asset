@@ -18,11 +18,17 @@ MonoBehaviour:
   m_GUID: a612436bd48652243bd65130aed0df52
   m_SerializeEntries:
   - m_GUID: 21cc2413133478e469339e82ad647b53
-    m_Address: BuildingUI
+    m_Address: ToBeBuiltBuildingUI
     m_ReadOnly: 0
     m_SerializedLabels: []
     m_MainAsset: {fileID: 3943535340472146767, guid: 21cc2413133478e469339e82ad647b53, type: 3}
     m_TargetAsset: {fileID: 3943535340472146767, guid: 21cc2413133478e469339e82ad647b53, type: 3}
+  - m_GUID: 6ab32476d7048b144aaa5938040757ef
+    m_Address: OwnedBuildingUI
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2455650685478570777, guid: 6ab32476d7048b144aaa5938040757ef, type: 3}
+    m_TargetAsset: {fileID: 2455650685478570777, guid: 6ab32476d7048b144aaa5938040757ef, type: 3}
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: ca4ea5a6d70b6274caf9576d12b217c9, type: 2}
   m_SchemaSet:

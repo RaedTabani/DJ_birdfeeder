@@ -34,16 +34,27 @@ public class ShopBuilding : MonoBehaviour
     private async Task<bool> Load(){
         foreach(Transform child in content)
             Destroy(child.gameObject);
-        List<BuildingModel> buildings = Session.Instance.config.buildings;
-        GameObject prefab = await Prefabs.GetAddressable<GameObject>("BuildingUI");
-        buildings.ForEach((x)=>{
+
+        
+        var ownedPrefab = await Prefabs.GetAddressable<GameObject>("OwnedBuildingUI");
+        Session.Instance.player.buildings.ForEach((x)=>{
+            BuildingUI item = Instantiate(ownedPrefab,content).GetComponent<BuildingUI>();
+            item.Setup(x);
+            item.buy.onClick.AddListener(()=>Upgrade(item.model));
+        });
+        var prefab = await Prefabs.GetAddressable<GameObject>("ToBeBuiltBuildingUI");
+        List<BuildingModel> toBeBuilt = Session.Instance.config.buildings.Where((x)=>!Session.Instance.player.buildings.Any((y)=>y.assetId.Equals(x.assetId))).ToList();
+        toBeBuilt.ForEach((x)=>{
             BuildingUI item = Instantiate(prefab,content).GetComponent<BuildingUI>();
             item.Setup(x);
             item.buy.onClick.AddListener(()=>Buy(item.model));
         });
         return true;
     }
-
+    private void Upgrade(BuildingModel model){
+        Debug.Log(model.assetId +" Upgraded");
+        Session.Instance.events.onBuildingUpgrade.Invoke(model.assetId);
+    }
     private async void Buy(BuildingModel model){
         var prefab = await Prefabs.GetAddressable<GameObject>(model.assetId);
         Building building = Instantiate(prefab,new Vector3(model.coord.x , model.coord.y-1 , model.coord.z ),Quaternion.identity).GetComponentInChildren<Building>();

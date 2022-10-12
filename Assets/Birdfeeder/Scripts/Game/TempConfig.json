@@ -9,7 +9,18 @@
                 "y":0,
                 "z":0
             },
-            "time":3
+            "time":3,
+            "upgrades":[
+                {
+                    "key":"time"
+                },
+                {
+                    "key":"amount"     
+                },
+                {
+                    "key":"time"     
+                }
+            ]
         },
         {
             "assetId":"ChunkB",

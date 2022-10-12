@@ -50,4 +50,5 @@ public class Session : MonoBehaviour
 public class SessionEvents{
     public UnityEvent onSplashReady = new UnityEvent();
     public UnityEvent onSceneReady = new UnityEvent();
+    public UnityEvent<string> onBuildingUpgrade = new UnityEvent<string>();
 }

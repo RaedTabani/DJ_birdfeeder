@@ -14,11 +14,9 @@ public class EffectsUI: MonoBehaviour
     async void Start()
     {
         blackScreen = transform.Find("BlackScreen");
-        
     }
 
     private async void Show(){
         await TweenHelper.DoSlideX(blackScreen,2000,1f);
-        
     }
 }
