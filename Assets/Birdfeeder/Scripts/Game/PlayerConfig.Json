@@ -1,0 +1,27 @@
+{
+    "buildings":[
+        {
+            "assetId":"ChunkA",
+            "spriteId":"bankSprite",
+            "coord":{
+                "x":0,
+                "y":0,
+                "z":0
+            },
+            "cost":1000,
+            "time":3
+        
+        },
+        {
+            "assetId":"ChunkB",
+            "spriteId":"farmSprite",
+            "coord":{
+                "x":0,
+                "y":0,
+                "z":4
+            },
+            "cost":3000,
+            "time":6
+        }
+    ]
+}

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Building
+  m_EditorClassIdentifier: 
+  m_GroupName: Building
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 4fb35fa3c2035094fa35b99c4f4dfb43
+  m_SerializeEntries:
+  - m_GUID: f2dca5fdac98a444b890e81f681492ae
+    m_Address: TestBuilding
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 5428090341509851177, guid: f2dca5fdac98a444b890e81f681492ae, type: 3}
+    m_TargetAsset: {fileID: 5428090341509851177, guid: f2dca5fdac98a444b890e81f681492ae, type: 3}
+  - m_GUID: 030a279915366d5478bccf585f1824ef
+    m_Address: ChunkA
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 4668682717345758600, guid: 030a279915366d5478bccf585f1824ef, type: 3}
+    m_TargetAsset: {fileID: 4668682717345758600, guid: 030a279915366d5478bccf585f1824ef, type: 3}
+  - m_GUID: 9ac658256092fe442a35c32a3925b99d
+    m_Address: ChunkB
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6538427155734877107, guid: 9ac658256092fe442a35c32a3925b99d, type: 3}
+    m_TargetAsset: {fileID: 6538427155734877107, guid: 9ac658256092fe442a35c32a3925b99d, type: 3}
+  - m_GUID: fb559023dab16704faf4f8aa7ab1abff
+    m_Address: ChunkC
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6538427155734877107, guid: fb559023dab16704faf4f8aa7ab1abff, type: 3}
+    m_TargetAsset: {fileID: 6538427155734877107, guid: fb559023dab16704faf4f8aa7ab1abff, type: 3}
+  - m_GUID: f44af718e6832e34c9212b58d7c8490e
+    m_Address: ChunkD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6538427155734877107, guid: f44af718e6832e34c9212b58d7c8490e, type: 3}
+    m_TargetAsset: {fileID: 6538427155734877107, guid: f44af718e6832e34c9212b58d7c8490e, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: ca4ea5a6d70b6274caf9576d12b217c9, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: c36f3ecd08734b843a9056f75a1d445a, type: 2}
+    - {fileID: 11400000, guid: b2abf3be2093e24438432fcad2c0f0d9, type: 2}

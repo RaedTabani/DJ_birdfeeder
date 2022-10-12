@@ -44,8 +44,11 @@ public class ShopBuilding : MonoBehaviour
         return true;
     }
 
-    private void Buy(BuildingModel model){
-        Debug.Log("Buying Building "+ model.assetId);
+    private async void Buy(BuildingModel model){
+        var prefab = await Prefabs.GetAddressable<GameObject>(model.assetId);
+        Building building = Instantiate(prefab,new Vector3(model.coord.x , model.coord.y-1 , model.coord.z ),Quaternion.identity).GetComponentInChildren<Building>();
+        building.Setup(model);
+        await TweenHelper.DoSlideY(building.transform.parent,model.coord.y,1);
     }
     public async void Show(){
         await Load();

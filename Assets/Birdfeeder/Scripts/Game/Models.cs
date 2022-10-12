@@ -22,11 +22,10 @@ public class DataModel{
 
 }
 public class BuildingModel{
-
-    
     public string assetId;
     public string spriteId;
     public string description;
+    public CoordModel coord;
     public int cost;
     public int level;
     public int amount;
@@ -34,6 +33,12 @@ public class BuildingModel{
     public Currency currency;
     public List<PropModel> upgrades;
 
+}
+
+public class CoordModel{
+    public int x;
+    public int y;
+    public int z;
 }
 public class PropModel{
     public string key;

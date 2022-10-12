@@ -1,24 +1,48 @@
 {
     "buildings":[
         {
-            "assetId":"bankBuilding",
+            "assetId":"ChunkA",
             "spriteId":"bankSprite",
-            "cost":1000
+            "cost":1000,
+            "coord":{
+                "x":0,
+                "y":0,
+                "z":0
+            },
+            "time":3
         },
         {
-            "assetId":"farmBuilding",
+            "assetId":"ChunkB",
             "spriteId":"farmSprite",
-            "cost":3000
+            "cost":3000,
+            "coord":{
+                "x":0,
+                "y":0,
+                "z":4
+            },
+            "time":6
         },
         {
-            "assetId":"woodBuilding",
+            "assetId":"ChunkC",
             "spriteId":"woodSprite",
-            "cost":6000
+            "cost":6000,
+            "coord":{
+                "x":4,
+                "y":0,
+                "z":0
+            },
+            "time":9
         },
         {
-            "assetId":"mechanicBuilding",
+            "assetId":"ChunkD",
             "spriteId":"mechanicSprite",
-            "cost":10000
+            "cost":10000,
+            "coord":{
+                "x":4,
+                "y":0,
+                "z":4
+            },
+            "time":100
         }
     ]
 }

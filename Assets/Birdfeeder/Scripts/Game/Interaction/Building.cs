@@ -21,6 +21,7 @@ public class Building : MonoBehaviour,IInteractable
 
     public void Setup(BuildingModel model){
         this.model = model;
+        
     }
 
     // Update is called once per frame
@@ -29,9 +30,9 @@ public class Building : MonoBehaviour,IInteractable
         if(ready)
             return;
         progress +=Time.deltaTime;
-        fill.fillAmount = progress/3f;
+        fill.fillAmount = progress/model.time;
 
-        if(progress>= 3){
+        if(progress>= model.time){
             currency.SetActive(true);
             progressbar.SetActive(false);
             ready=true;
@@ -41,6 +42,7 @@ public class Building : MonoBehaviour,IInteractable
     public void Interact(){
         //Play Animation
         //Harvest Money if ready
+        Debug.Log("Are we here");
         if(!ready)
             return;
         currency.SetActive(false);

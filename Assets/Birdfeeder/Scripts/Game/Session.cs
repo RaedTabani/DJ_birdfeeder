@@ -4,15 +4,16 @@ using System.Threading.Tasks;
 
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+
 
 using Newtonsoft.Json;
 public class Session : MonoBehaviour
 {
     public static Session Instance;
-    public SessionEvents events;
+    public SessionEvents events = new SessionEvents();
 
     public TextAsset tempConfig;
+    public TextAsset playerConfig;
     public ConfigModel config;
     public PlayerModel player;
 
@@ -25,9 +26,9 @@ public class Session : MonoBehaviour
     void Start()
     {
         GetConfig();
-        Debug.Log(config.buildings.Count);
+        GetPlayer();
         ready = true;
-        StartCoroutine(LoadNextScene());   
+         
     }
 
     // Update is called once per frame
@@ -39,16 +40,14 @@ public class Session : MonoBehaviour
     private void GetConfig(){
         config = JsonConvert.DeserializeObject<ConfigModel>(tempConfig.text);
     }
-
-    private IEnumerator LoadNextScene(){
-        AsyncOperation operation = SceneManager.LoadSceneAsync(1,LoadSceneMode.Single);
-        while(!operation.isDone){
-            Debug.Log(operation.progress);
-            yield return null;
-        }
+    private void GetPlayer(){
+        player  = JsonConvert.DeserializeObject<PlayerModel>(playerConfig.text);
     }
+
+
 }
 
 public class SessionEvents{
-
+    public UnityEvent onSplashReady = new UnityEvent();
+    public UnityEvent onSceneReady = new UnityEvent();
 }

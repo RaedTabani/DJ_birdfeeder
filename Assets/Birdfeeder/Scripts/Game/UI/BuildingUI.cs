@@ -19,7 +19,7 @@ public class BuildingUI : MonoBehaviour
         //Sprite sprite = await Prefabs.GetAddressable<Sprite>(model.assetId);
         //image.sprite = sprite;
         cost.text = "BUY /n" + model.cost.ToString();
-        if(model.cost < 4000)
+        if(true)
             return;
         buy.interactable = false;
         cost.text = "Unlock at "+ model.cost;

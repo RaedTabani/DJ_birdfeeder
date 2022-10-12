@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
             if(interactable == null)
                 return;
             interactable.Interact();
+            Debug.Log(hit.collider.name);
         }
     }
 }
