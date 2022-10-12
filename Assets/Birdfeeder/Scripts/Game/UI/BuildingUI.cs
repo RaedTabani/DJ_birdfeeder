@@ -24,6 +24,7 @@ public class BuildingUI : MonoBehaviour
         buy.interactable = false;
         cost.text = "Unlock at "+ model.cost;
         status.enabled =true;
+        Debug.Log("");
     }
 
 }
